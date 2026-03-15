@@ -27,11 +27,17 @@ export default function Navlinks({ user }: NavlinksProps) {
           </Link>
           {user && (
             <>
-              <Link href="/account" className={s.link}>
-                Account
-              </Link>
               <Link href="/dashboard" className={s.link}>
                 Dashboard
+              </Link>
+              <Link href="/dashboard/tasks" className={s.link}>
+                Tasks
+              </Link>
+              <Link href="/dashboard/devices" className={s.link}>
+                Devices
+              </Link>
+              <Link href="/account" className={s.link}>
+                Account
               </Link>
             </>
           )}

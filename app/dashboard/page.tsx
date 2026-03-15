@@ -102,22 +102,22 @@ export default async function DashboardPage() {
           </h2>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             <a
-              href="/account"
+              href="/dashboard/tasks"
               className="p-4 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors text-center"
             >
-              <p className="text-white font-medium">Manage Subscription</p>
+              <p className="text-white font-medium">View Tasks</p>
+            </a>
+            <a
+              href="/dashboard/devices"
+              className="p-4 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors text-center"
+            >
+              <p className="text-white font-medium">Manage Devices</p>
             </a>
             <a
               href="/account"
               className="p-4 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors text-center"
             >
-              <p className="text-white font-medium">Add Device</p>
-            </a>
-            <a
-              href="/account"
-              className="p-4 rounded-lg bg-zinc-800 hover:bg-zinc-700 transition-colors text-center"
-            >
-              <p className="text-white font-medium">View Print Queue</p>
+              <p className="text-white font-medium">Subscription</p>
             </a>
             <a
               href="/account"
