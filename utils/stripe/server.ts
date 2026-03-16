@@ -158,11 +158,13 @@ export async function createStripePortal(currentPath: string) {
         throw new Error('Could not create billing portal');
       }
       return url;
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      throw new Error('Could not create billing portal');
+      throw new Error(
+        `Could not create billing portal: ${err.message || 'Unknown error'}`
+      );
     }
-  } catch (error) {
+  } catch (error: any) {
     if (error instanceof Error) {
       console.error(error);
       return getErrorRedirect(
@@ -173,7 +175,7 @@ export async function createStripePortal(currentPath: string) {
     } else {
       return getErrorRedirect(
         currentPath,
-        'An unknown error occurred.',
+        error?.message || 'An unknown error occurred.',
         'Please try again later or contact a system administrator.'
       );
     }
